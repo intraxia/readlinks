@@ -1,0 +1,36 @@
+{
+  "name": "intraxia/readlinks",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "description": "WordPress starter theme with a modern development workflow",
+  "homepage": "https://reads.jamesdigioia.com",
+  "authors": [
+    {
+      "name": "James DiGioia",
+      "email": "jamesorodig@gmail.com",
+      "homepage": "https://github.com/mAAdhaTTah"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Intraxia\\Readlinks\\": "app/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0",
+    "intraxia/jaxion": "dev-master",
+    "zordius/lightncandy": "^0.95.0",
+    "brain/cortex": "1.0.0-alpha.7",
+    "brain/context": "^1.0"
+  },
+  "require-dev": {
+    "websharks/wp-i18n-tools": "dev-master",
+    "wp-coding-standards/wpcs": "0.8.0",
+    "squizlabs/php_codesniffer": "^2.5.1",
+    "intraxia/codestyle": "dev-master"
+  },
+  "scripts": {
+    "genpot": "vendor/websharks/wp-i18n-tools/makepot.php wp-plugin . $(pwd)/lang/readlinks.pot",
+    "sniff": "phpcs -s --runtime-set installed_paths vendor/wp-coding-standards/wpcs  -p app/ --standard=vendor/intraxia/codestyle/ruleset.xml --report=full"
+  }
+}

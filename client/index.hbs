@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js" {{wp "language_attributes"}}>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{wp "get_bloginfo" "name"}} Feed"
+          href="{{wp "esc_url" (wp "get_feed_link")}}">
+    {{wp "wp_head"}}
+</head>
+<body {{wp "body_class"}}>
+<!--[if lt IE 11]>
+<div class="alert alert-warning">{{i18n "outdated.warning"}}</div>
+<![endif]-->
+{{wp "do_action" "get_header"}}
+<header class="banner navbar navbar-default navbar-static-top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">{{i18n "navigation.toggle"}}</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{wp "esc_url" (wp "home_url" "/")}}">{{wp "get_bloginfo" "name"}}</a>
+        </div>
+
+        <nav class="collapse navbar-collapse" role="navigation">
+            {{navigation}}
+        </nav>
+    </div>
+</header>
+<div class="wrap container" role="document">
+    <div class="content row">
+        <main class="main" role="main">
+            <div class="page-header">
+                <h1>{{i18n "home.header"}}</h1>
+            </div>
+
+            {{#each posts}}
+                <section id="{{{@key}}}" class="posts-date">
+                    <h1 class="posts-date-header">{{{@key}}}</h1>
+                    {{#each links}}
+                    <article {{wp "post_class" "" ID}}>
+                        <h2 class="entry-title">
+                            <a href="{{wp "get_post_meta" ID "item_link" true}}">
+                                {{wp "get_the_title" ID}}
+                            </a>
+                        </h2>
+                    </article>
+                    {{/each}}
+                </section>
+            {{/each}}
+            {{! @todo split into partials and extend a layout }}
+            {{#if link}}
+                {{{link.post_content}}}
+            {{/if}}
+
+            {{> pagination}}
+        </main><!-- /.main -->
+    </div><!-- /.content -->
+</div><!-- /.wrap -->
+{{wp "do_action" "get_footer"}}
+<footer class="content-info" role="contentinfo">
+    <div class="container">
+        {{wp "dynamic_sidebar" "sidebar-footer"}}
+    </div>
+</footer>
+{{wp "wp_footer"}}
+</body>
+</html>

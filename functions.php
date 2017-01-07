@@ -1,32 +1,53 @@
 <?php
+declare( strict_types = 1 );
+
+use Brain\Cortex;
+use Intraxia\Readlinks\App;
+
 /**
- * Sage includes
+ * Helper function for prettying up errors
  *
- * The $sage_includes array determines the code library included in your theme.
- * Add or remove files to the array as needed. Supports child theme overrides.
- *
- * Please note that missing files will produce a fatal error.
- *
- * @link https://github.com/roots/sage/pull/1042
+ * @param string $message
+ * @param string $subtitle
+ * @param string $title
  */
-$sage_includes = [
-  'lib/utils.php',                 // Utility functions
-  'lib/init.php',                  // Initial theme setup and constants
-  'lib/wrapper.php',               // Theme wrapper class
-  'lib/conditional-tag-check.php', // ConditionalTagCheck class
-  'lib/config.php',                // Configuration
-  'lib/assets.php',                // Scripts and stylesheets
-  'lib/titles.php',                // Page titles
-  'lib/nav.php',                   // Custom nav modifications
-  'lib/gallery.php',               // Custom [gallery] modifications
-  'lib/extras.php',                // Custom functions
-];
+$theme_error = function ( $message, $subtitle = '', $title = '' ) {
+	$title   = $title ?: __( 'Readlinks Error', 'readlinks' );
+	$message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p>";
+	wp_die( $message, $title );
+};
 
-foreach ($sage_includes as $file) {
-  if (!$filepath = locate_template($file)) {
-    trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
-  }
-
-  require_once $filepath;
+/**
+ * Ensure compatible version of PHP is used
+ */
+if ( version_compare( '7.1.0', phpversion(), '>=' ) ) {
+	$theme_error( __( 'You must be using PHP 7.1.0 or greater.', 'readlinks' ), __( 'Invalid PHP version', 'readlinks' ) );
 }
-unset($file, $filepath);
+
+/**
+ * Ensure dependencies are loaded
+ */
+if ( ! ( $exists = file_exists( $composer = __DIR__ . '/vendor/autoload.php' ) ) && ! class_exists( App::class ) ) {
+	$theme_error(
+		__( 'You must run <code>composer install</code> from the Readlinks directory.', 'readlinks' ),
+		__( 'Autoloader not found.', 'readlinks' )
+	);
+}
+
+if ( $exists ) {
+	require_once $composer;
+}
+
+$app = new App( __FILE__ );
+
+$app
+	->remove( 'url' )
+	->define( 'url', get_stylesheet_directory_uri() . '/' )
+	->remove( 'path' )
+	->define( 'path', get_stylesheet_directory() . '/' )
+	->remove( 'slug' )
+	->define( 'slug', 'readlinks' );
+
+$app->boot();
+$app->fetch( 'loader' )->run();
+Cortex::boot();

@@ -1,0 +1,10 @@
+<nav aria-label="Page Navigation">
+    <ul class="pager">
+        {{#if pages.older}}
+        <li class="previous"><a href="{{pages.older}}"><span aria-hidden="true">&larr;</span> Older</a></li>
+        {{/if}}
+        {{#if pages.newer}}
+        <li class="next"><a href="{{pages.newer}}">Newer <span aria-hidden="true">&rarr;</span></a></li>
+        {{/if}}
+    </ul>
+</nav>

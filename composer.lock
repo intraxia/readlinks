@@ -1,0 +1,513 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "38876aee128ec9f426388de15c0a2555",
+    "packages": [
+        {
+            "name": "brain/context",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Brain-WP/Context.git",
+                "reference": "780f72c5ea5b27c91753e7bf38e3bb49c9f59078"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Brain-WP/Context/zipball/780f72c5ea5b27c91753e7bf38e3bb49c9f59078",
+                "reference": "780f72c5ea5b27c91753e7bf38e3bb49c9f59078",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "antecedent/patchwork": "~1.3.0",
+                "brain/monkey": "~1.2",
+                "gmazzap/andrew": "~1.1.0",
+                "mockery/mockery": "0.9.3",
+                "phpunit/phpunit": "~4.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Brain\\Context\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giuseppe Mazzapica",
+                    "email": "giuseppe.mazzapica@gmail.com"
+                }
+            ],
+            "description": "No-dependencies package to provide context to templates based on query.",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2016-09-15T22:35:47+00:00"
+        },
+        {
+            "name": "brain/cortex",
+            "version": "1.0.0-alpha.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Brain-WP/Cortex.git",
+                "reference": "0f33ad8578fa051ab5e46e14c9478df4d728e49a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Brain-WP/Cortex/zipball/0f33ad8578fa051ab5e46e14c9478df4d728e49a",
+                "reference": "0f33ad8578fa051ab5e46e14c9478df4d728e49a",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/fast-route": "~0.7.0",
+                "php": ">=5.5",
+                "psr/http-message": "*"
+            },
+            "require-dev": {
+                "brain/monkey": "~1.2.0",
+                "gmazzap/andrew": "~1.0.0",
+                "mockery/mockery": "0.9.3",
+                "phpunit/phpunit": "4.8.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Brain\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Giuseppe Mazzapica",
+                    "email": "giuseppe.mazzapica@gmail.com",
+                    "homepage": "http://gm.zoomlab.it",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Cortex is a package that implements a routing system in WordPress.",
+            "homepage": "https://github.com/Brain-WP/Cortex",
+            "keywords": [
+                "fast route",
+                "pretty permalink",
+                "rewrite rules",
+                "router",
+                "routing",
+                "wordpress"
+            ],
+            "time": "2016-07-14T19:53:27+00:00"
+        },
+        {
+            "name": "intraxia/jaxion",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/intraxia/jaxion.git",
+                "reference": "ad6802b49af2662f8b2f65b4cf522910cc81d6aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/intraxia/jaxion/zipball/ad6802b49af2662f8b2f65b4cf522910cc81d6aa",
+                "reference": "ad6802b49af2662f8b2f65b4cf522910cc81d6aa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "10up/wp_mock": "0.1.*",
+                "intraxia/codestyle": "dev-master",
+                "mockery/mockery": "~0.9.4",
+                "phpunit/phpunit": "~4.7.7",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Intraxia\\Jaxion\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mAAdhaTTah",
+                    "email": "jamesorodig@gmail.com"
+                }
+            ],
+            "description": "A WordPress plugin framework for modern WordPress development.",
+            "time": "2016-12-19 12:51:54"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
+                "reference": "8164b4a0d8afde4eae5f1bfc39084972ba23ad36",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2015-12-20T19:50:12+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "zordius/lightncandy",
+            "version": "v0.95",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zordius/lightncandy.git",
+                "reference": "748cd17b2d496dbc7657b9390d918cf7dcd0101e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zordius/lightncandy/zipball/748cd17b2d496dbc7657b9390d918cf7dcd0101e",
+                "reference": "748cd17b2d496dbc7657b9390d918cf7dcd0101e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.17"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "v0.95-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LightnCandy\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zordius Chen",
+                    "email": "zordius@yahoo-inc.com"
+                }
+            ],
+            "description": "An extremely fast PHP implementation of handlebars ( http://handlebarsjs.com/ ) and mustache ( http://mustache.github.io/ ).",
+            "homepage": "https://github.com/zordius/lightncandy",
+            "keywords": [
+                "handlebars",
+                "logicless",
+                "mustache",
+                "php",
+                "template"
+            ],
+            "time": "2016-08-23T07:07:34+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "intraxia/codestyle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/intraxia/codestyle.git",
+                "reference": "76b4cdd70645073baa5ee86cb317c00fc6bea0ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/intraxia/codestyle/zipball/76b4cdd70645073baa5ee86cb317c00fc6bea0ca",
+                "reference": "76b4cdd70645073baa5ee86cb317c00fc6bea0ca",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~2.2",
+                "wp-coding-standards/wpcs": "0.8.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "mAAdhaTTah",
+                    "email": "jamesorodig@gmail.com"
+                }
+            ],
+            "description": "The Intraxia PHP Coding Standards.",
+            "time": "2016-10-01 19:46:52"
+        },
+        {
+            "name": "squizlabs/php_codesniffer",
+            "version": "2.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
+                "reference": "9b324f3a1132459a7274a0ace2e1b766ba80930f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9b324f3a1132459a7274a0ace2e1b766ba80930f",
+                "reference": "9b324f3a1132459a7274a0ace2e1b766ba80930f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-simplexml": "*",
+                "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
+                "php": ">=5.1.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "bin": [
+                "scripts/phpcs",
+                "scripts/phpcbf"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "CodeSniffer.php",
+                    "CodeSniffer/CLI.php",
+                    "CodeSniffer/Exception.php",
+                    "CodeSniffer/File.php",
+                    "CodeSniffer/Fixer.php",
+                    "CodeSniffer/Report.php",
+                    "CodeSniffer/Reporting.php",
+                    "CodeSniffer/Sniff.php",
+                    "CodeSniffer/Tokens.php",
+                    "CodeSniffer/Reports/",
+                    "CodeSniffer/Tokenizers/",
+                    "CodeSniffer/DocGenerators/",
+                    "CodeSniffer/Standards/AbstractPatternSniff.php",
+                    "CodeSniffer/Standards/AbstractScopeSniff.php",
+                    "CodeSniffer/Standards/AbstractVariableSniff.php",
+                    "CodeSniffer/Standards/IncorrectPatternException.php",
+                    "CodeSniffer/Standards/Generic/Sniffs/",
+                    "CodeSniffer/Standards/MySource/Sniffs/",
+                    "CodeSniffer/Standards/PEAR/Sniffs/",
+                    "CodeSniffer/Standards/PSR1/Sniffs/",
+                    "CodeSniffer/Standards/PSR2/Sniffs/",
+                    "CodeSniffer/Standards/Squiz/Sniffs/",
+                    "CodeSniffer/Standards/Zend/Sniffs/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Greg Sherwood",
+                    "role": "lead"
+                }
+            ],
+            "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
+            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "keywords": [
+                "phpcs",
+                "standards"
+            ],
+            "time": "2016-11-30T04:02:31+00:00"
+        },
+        {
+            "name": "websharks/wp-i18n-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/websharks/wp-i18n-tools.git",
+                "reference": "51e3a241dacdf34a56bc6999e89cca95885d7824"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/websharks/wp-i18n-tools/zipball/51e3a241dacdf34a56bc6999e89cca95885d7824",
+                "reference": "51e3a241dacdf34a56bc6999e89cca95885d7824",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "websharks",
+                    "homepage": "http://websharks-inc.com/",
+                    "role": "company"
+                },
+                {
+                    "name": "jaswsinc",
+                    "homepage": "http://jaswsinc.com/",
+                    "role": "developer"
+                },
+                {
+                    "name": "raamdev",
+                    "homepage": "http://raam.org/",
+                    "role": "developer"
+                }
+            ],
+            "description": "WordPress i18n/translation tools.",
+            "homepage": "https://github.com/websharks/wp-i18n-tools",
+            "keywords": [
+                "gettext",
+                "i18n",
+                "translation",
+                "websharks",
+                "wordpress"
+            ],
+            "time": "2016-09-08 17:23:41"
+        },
+        {
+            "name": "wp-coding-standards/wpcs",
+            "version": "0.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
+                "reference": "b3d4d8eedd8b0b7f4fdf8764df1c8b23ff099334"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/b3d4d8eedd8b0b7f4fdf8764df1c8b23ff099334",
+                "reference": "b3d4d8eedd8b0b7f4fdf8764df1c8b23ff099334",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "~2.2"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/graphs/contributors"
+                }
+            ],
+            "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+            "keywords": [
+                "phpcs",
+                "standards",
+                "wordpress"
+            ],
+            "time": "2015-10-02T22:20:22+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "intraxia/jaxion": 20,
+        "brain/cortex": 15,
+        "websharks/wp-i18n-tools": 20,
+        "intraxia/codestyle": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.1.0"
+    },
+    "platform-dev": []
+}
