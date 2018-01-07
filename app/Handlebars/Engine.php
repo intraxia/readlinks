@@ -47,14 +47,13 @@ class Engine {
 	/**
 	 * Render a template with the provided context.
 	 *
-	 * @param string $template
 	 * @param array  $context
 	 *
 	 * @return string
 	 * @throws \Exception
 	 */
-	public function render( string $template, array $context ) : string {
-		$phpStr = LightnCandy::compile( file_get_contents( $this->views . $template . '.hbs' ), array(
+	public function render( array $context ) : string {
+		$phpStr = LightnCandy::compile( file_get_contents( $this->views . 'index.hbs' ), array(
 			'flags'           => LightnCandy::FLAG_HANDLEBARSJS_FULL | LightnCandy::FLAG_RUNTIMEPARTIAL | LightnCandy::FLAG_EXTHELPER,
 			'helpers'         => array_keys( $this->helpers ),
 			'partialresolver' => function ( $cx, $name ) {

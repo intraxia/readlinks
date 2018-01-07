@@ -74,7 +74,7 @@ class Response implements HasActions {
 		$this->assets->enqueue_web_scripts();
 
 		// @codingStandardsIgnoreStart
-		echo $this->engine->render( 'index', $context );
+		echo $this->engine->render( $context );
 		// @codingStandardsIgnoreEnd
 
 		// Return a blank file to make WordPress happy
