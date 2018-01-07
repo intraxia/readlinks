@@ -64,7 +64,11 @@ class Response implements HasActions {
 			],
 		] );
 
-		wp_register_style( 'google_fonts', 'http://fonts.googleapis.com/css?family=Ubuntu:400,700', false );
+		if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+			$this->assets->set_debug( true );
+		}
+
+		wp_register_style( 'google_fonts', '//fonts.googleapis.com/css?family=Ubuntu:400,700', false );
 		wp_enqueue_style( 'google_fonts' );
 
 		$this->assets->enqueue_web_scripts();
