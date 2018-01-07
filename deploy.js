@@ -1,3 +1,4 @@
+const fs = require('fs');
 const shell = require('shelljs');
 
 const ZIP_DIR = fs.mkdtempSync('/tmp/readlinks');
