@@ -16,6 +16,11 @@ use Intraxia\Readlinks\Provider\ViewServiceProvider;
  */
 class App extends Application {
 	/**
+	 * Define plugin version on Application.
+	 */
+	const VERSION = '0.1.0';
+
+	/**
 	 * ServiceProviders to register with the Application
 	 *
 	 * @var string[]
