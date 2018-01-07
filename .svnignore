@@ -1,0 +1,12 @@
+build.js
+node_modules
+test
+.babelrc
+.beaverrc.js
+.editorconfig
+.eslintrc.js
+.gitignore
+.svnignore
+.travis.yml
+*.json
+*.lock
