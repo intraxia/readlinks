@@ -1,15 +1,29 @@
 import './styles/main.less';
-import R from 'ramda';
-import { createStore, combineReducers, applyMiddleware } from 'redux';
+import 'babel-polyfill';
+import { domDelta, observeDelta } from 'brookjs';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { init } from './actions';
+import {} from './deltas';
+import { el, view } from './dom';
+import {} from './reducers';
+import { selectProps } from './selectors';
 
 const { __READLINKS_STATE__ } = global;
 
-createStore(
-    combineReducers({
-        posts: R.compose(R.identity, R.defaultTo({}))
-    }),
-    __READLINKS_STATE__,
-    applyMiddleware(
+const compose = composeWithDevTools({
+    name: 'readlinks'
+});
 
-    )
-);
+const enhancer = compose(applyMiddleware(observeDelta(
+    // Register your deltas here
+    domDelta({ el, view, selectProps })
+)));
+
+const reducer = combineReducers({
+    // Register your reducers here
+});
+
+const store = createStore(reducer, __READLINKS_STATE__, enhancer);
+
+store.dispatch(init());

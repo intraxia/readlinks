@@ -1,8 +1,8 @@
 {
-  "plugins": [
-    "ramda"
-  ],
   "presets": [
-    ["es2015", { "modules": false }]
+    ["brookjs", {
+      "modules": false,
+      "useBuiltIns": true
+    }]
   ]
 }
