@@ -2,6 +2,8 @@
 declare( strict_types = 1 );
 
 use Brain\Cortex;
+use Intraxia\Jaxion\Core\Config;
+use Intraxia\Jaxion\Core\ConfigType;
 use Intraxia\Readlinks\App;
 
 /**
@@ -38,15 +40,7 @@ if ( $exists ) {
 	require_once $composer;
 }
 
-$app = new App( __FILE__ );
-
-$app
-	->remove( 'url' )
-	->define( 'url', get_stylesheet_directory_uri() . '/' )
-	->remove( 'path' )
-	->define( 'path', get_stylesheet_directory() . '/' )
-	->remove( 'slug' )
-	->define( 'slug', 'readlinks' );
+$app = new App( new Config( ConfigType::THEME, __FILE__ ) );
 
 $app->boot();
 $app->fetch( 'loader' )->run();
